@@ -23,6 +23,7 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Data</th>
                     <th scope="col">Valor Total</th>
+                    <th scope="col">Status</th>
                     <th scope="col" style="width: 150px">Ações</th>
                   </tr>
                 </thead>
@@ -33,6 +34,7 @@
                             <td>{{ $purchase->client->name }}</td>
                             <td>{{ $purchase->date_formatted }}</td>
                             <td>R${{ $purchase->value_total_formatted }}</td>
+                            <td>{{ $purchase->status }}</td>
                             <td>
                                 <a class="btn btn-success" href="{{ route('purchases.show', $purchase->id) }}">Ver</a>
                                 <a class="btn btn-primary" href="{{ route('purchases.edit', $purchase->id) }}">Editar</a>

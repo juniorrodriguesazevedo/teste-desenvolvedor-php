@@ -71,6 +71,14 @@
                         </p>
                     </div>
                 </div>
+                <div class="card m-2 shadow-sm">
+                    <div class="card-body">
+                        <p><strong>Status: </strong></p>
+                        <p class="card-text">
+                            {{ $purchase->status }}
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div>

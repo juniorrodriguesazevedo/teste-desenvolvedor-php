@@ -28,7 +28,8 @@ class PurchaseStoreRequest extends FormRequest
             'product_id' => ['required', 'exists:products,id'],
             'date' => ['required', 'date'],
             'bar_code' => ['required', 'min:3', 'max:20'],
-            'the_amount' => ['required', 'integer']
+            'the_amount' => ['required', 'integer'],
+            'status' => ['required']
         ];
     }
 }

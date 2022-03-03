@@ -11,7 +11,10 @@
     <div class="col-md-6">
         {!!Form::date('date', 'Data')!!}
     </div>
-    <div class="col-md-12">
+    <div class="col-md-6">
+        {!!Form::select('status', 'Status')->options(['Aberto' => 'Aberto', 'Pago' => 'Pago', 'Cancelado' => 'Cancelado'])!!}
+    </div>
+    <div class="col-md-6">
         {!!Form::text('bar_code', 'Código de Barras')!!}
     </div>
     <div class="col-md-12">

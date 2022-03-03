@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\PurchaseController;
 
 Route::get('/', function () {
-    return view('clients.index');
+    return redirect()->route('clients.index');
 });
 
 Route::group(['prefix' => 'admin'], function () {

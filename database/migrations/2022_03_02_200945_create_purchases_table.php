@@ -21,6 +21,7 @@ class CreatePurchasesTable extends Migration
             $table->string('bar_code');
             $table->integer('the_amount');
             $table->decimal('value_total', 10, 2);
+            $table->enum('status', ['Aberto', 'Pago', 'Cancelado'])->default('Aberto');
             $table->timestamps();
         });
     }
