@@ -1,71 +1,24 @@
-# Teste para candidatos à vaga de Desenvolvedor PHP
+## Teste GAFA
+Teste para vaga de emprego.
 
-Olá desenvolvedor, nesse teste analisaremos seu conhecimento geral. Abaixo explicaremos tudo o que será necessário para você realizar da melhor forma seu teste.
+### Bibliotecas usadas:
+* [Laravel pt-BR Localization](https://github.com/lucascudo/laravel-pt-BR-localization)
+* [Bootstrap 4 forms for Laravel 5/6/7/8](https://github.com/netojose/laravel-bootstrap-4-forms)
 
-## Instruções
+### Instalação: 
+* Você precisará do PHP instalado em seu computador, [BAIXE AQUI](https://www.php.net/downloads). 
+* Na raiz do projeto use o comando `composer install`. 
+* No arquivo `.ENV` edite o campo `DB_CONNECTION` e coloque os dados do seu banco de dados.
+* Use o comando `php artisan migrate:fresh --seed` para fazer as migrações.
+* Use o comando `php artisan serve` para rodar em seu servidor.
+* Navegue para `http://localhost:8000`. O aplicativo será carregado automaticamente.
 
-O desafio consiste em implementar uma aplicação Web simples utilizando o framework PHP Laravel, e um banco de dados relacional MySQL ou Postgres, a partir de uma modelagem de dados inicial.
+#### Observações:
+Ao propagar o banco ele já vem com alguns dados cadastrados:
 
-Você vai criar uma aplicação de cadastro de pedidos de compra, com as seguintes funcionalidades:
-
-- CRUD de clientes.
-- CRUD de produtos.
-- CRUD de pedidos de compra, com status (Em Aberto, Pago ou Cancelado).
-- Cada CRUD:
-  - deve ser filtrável e ordenável por qualquer campo, e possuir paginação de 20 itens.
-  - deve possuir formulários para criação e atualização de seus itens.
-  - deve permitir a deleção de qualquer item de sua lista.
-- Barra de navegação entre os CRUDs.
-- Links para os outros CRUDs nas listagens (Ex: link para o detalhe do cliente da compra na lista de pedidos de compra)
-
-
-## Modelo de dados
-
-A modelagem inicial para a implementação solução é a seguinte:
-
-| Nome Coluna         |  Data Type          |
-| ------------------- | ------------------- |
-|  NumeroPedido       |  int                |
-|  NomeCliente        |  Varchar(100)       |
-|  CPF                |  char(11)           |
-|  EMAIL              |  nchar(10)          |
-|  DtPedido           |  smalldatetime      |
-|  CodBarras          |  varchar(20)        |
-|  NomeProduto        |  varchar(100)       |
-|  ValorUnitario      |  money              |
-|  Quantidade         |  int                |
-
-Além disso, a implementação deste modelo em um banco de dados relacional deve ser realizada levando em consideração os seguintes requisitos:
-
-- O banco de dados deve ser criado utilizando Migrations do framework Laravel, e também utilizar Seeds e Factorys para popular as informações no banco de dados.
-- Implementação das validações necessárias na camada que julgar melhor.
-
-## Tecnologias a serem utilizadas
-Devem ser utilizadas as seguintes tecnologias:
-
-- HTML
-- CSS
-- Javascript
-- Framework Laravel (PHP)
-- Docker (se souber para montar o ambiente de dev)
-
-## Entrega
-
-- Para iniciar o teste, faça um fork deste repositório; 
-- Crie uma branch com o seu nome;
-- Altere o arquivo readme.md com as informações necessárias para executar o seu teste e caso queira colocar alguma instrução a mais;
-- Depois de finalizado, envie-nos o pull request;
-
-## Bônus
-
-- Permitir que o usuário mude o número de itens por página.
-- Implementar a camada de Front-End utilizando a biblioteca javascript Bootstrap e ser responsiva.
-- API Rest JSON para todos os CRUDS listados acima.
-
-## O que iremos analisar
-
-- Organização do código;
-- Aplicação de design patterns;
-- Separação de módulos e componentes;
-
-### Boa sorte!
+### Lista de todas as APIs:
+Method   | Descrição | Rota
+:--------- | :------ | :------
+GET | Clientes | `localhost:8000/api/clients`
+GET | Produtos | `localhost:8000/api/products`
+GET | Pedidos | `localhost:8000/api/purchases`
